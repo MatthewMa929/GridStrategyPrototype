@@ -1,4 +1,4 @@
-//Temporary Movement, will ask obj_move_manager before moving
+//Will ask obj_move_manager before moving
 var move_x = 0;
 var move_y = 0;
 

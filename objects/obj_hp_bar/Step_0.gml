@@ -1,0 +1,1 @@
+//image_xscale = owner.hp/owner.hp_max

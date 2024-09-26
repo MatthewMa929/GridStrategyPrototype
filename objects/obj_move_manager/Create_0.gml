@@ -11,7 +11,7 @@ function move_object(obj, move_x, move_y) {
 	var new_x = obj.x + (move_x * grid_size);
 	var new_y = obj.y + (move_y * grid_size);
 	
-	show_debug_message("Attempted mew position: " + string(new_x) + ", " + string(new_y));
+	show_debug_message("Attempted new position: " + string(new_x) + ", " + string(new_y));
 	
 	if (position_meeting(new_x, new_y, obj_wall)) {
 		return false;
