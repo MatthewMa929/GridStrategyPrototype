@@ -3,7 +3,8 @@
 grid_size = 64;
 
 global.game_state = {
-	turn: "player"
+	turn: "player",
+	selected_action: ""
 }
 move_timer = 0; // temporary
 
@@ -20,6 +21,24 @@ function move_object(obj, move_x, move_y) {
 	obj.x = new_x;
 	obj.y = new_y;
 	return true;
+}
+
+function attack_object(obj, attack_x, attack_y) {
+	var grid_x = floor(obj.x / grid_size) * grid_size;
+	var grid_y = floor(obj.y / grid_size) * grid_size;
+	
+	var check_x = grid_x + (attack_x * grid_size);
+	var check_y = grid_y + (attack_y * grid_size);
+		
+	with(obj_enemy) {
+		if (x >= check_x && x < check_x + grid_size && y >= check_y && y < check_y + grid_size) {
+	        show_debug_message("Enemy detected at: x = " + string(x) + ", y = " + string(y));
+	        instance_destroy();
+	        return true;
+		}
+	}
+
+	return false;
 }
 
 
