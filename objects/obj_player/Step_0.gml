@@ -70,6 +70,9 @@ if (global.game_state.selected_action == "attack") {
 	}
 }
 
+if max_hp < hp {
+	hp = max_hp
+}
 
 
 

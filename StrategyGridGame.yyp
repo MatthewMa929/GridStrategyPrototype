@@ -35,6 +35,7 @@
   "name":"StrategyGridGame",
   "resources":[
     {"id":{"name":"obj_ability_manager","path":"objects/obj_ability_manager/obj_ability_manager.yy",},},
+    {"id":{"name":"obj_bullet","path":"objects/obj_bullet/obj_bullet.yy",},},
     {"id":{"name":"obj_druid","path":"objects/obj_druid/obj_druid.yy",},},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"obj_floor","path":"objects/obj_floor/obj_floor.yy",},},
@@ -50,7 +51,9 @@
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
     {"id":{"name":"rm_example_lv","path":"rooms/rm_example_lv/rm_example_lv.yy",},},
     {"id":{"name":"global_script","path":"scripts/global_script/global_script.yy",},},
+    {"id":{"name":"shoot_bullet","path":"scripts/shoot_bullet/shoot_bullet.yy",},},
     {"id":{"name":"spr_attack_button","path":"sprites/spr_attack_button/spr_attack_button.yy",},},
+    {"id":{"name":"spr_bullet","path":"sprites/spr_bullet/spr_bullet.yy",},},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},},
     {"id":{"name":"spr_floor","path":"sprites/spr_floor/spr_floor.yy",},},
     {"id":{"name":"spr_hp_bar","path":"sprites/spr_hp_bar/spr_hp_bar.yy",},},
