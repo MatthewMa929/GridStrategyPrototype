@@ -9,3 +9,8 @@ function move_and_check_x(direction) {
 function move_and_check_y(direction) {
     return obj_move_manager.move_object(self, 0, direction);
 }
+
+function end_enemy_turn() {
+	global.game_state.turn = "player";
+	global.game_state.selected_action = "move";
+}

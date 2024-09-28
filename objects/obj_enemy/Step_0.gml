@@ -16,29 +16,29 @@ if(global.game_state.turn == "enemy") {
 	if (abs(dist_x) > abs(dist_y)) {
 		// if X is further, move in X first, then X
 		move_success = move_and_check_x(dist_x > 0 ? 1 : -1);
-		if (move_success) { global.game_state.turn = "player"; return; }
+		if (move_success) { end_enemy_turn(); return; }
 		
 		move_success = move_and_check_y(dist_y > 0 ? 1 : -1);
-		if (move_success) { global.game_state.turn = "player"; return; }
+		if (move_success) { end_enemy_turn(); return; }
 		
 		move_success = move_and_check_x(dist_x > 0 ? -1 : 1);
-		if (move_success) { global.game_state.turn = "player"; return; }
+		if (move_success) { end_enemy_turn(); return; }
 		
 		move_success = move_and_check_y(dist_y > 0 ? -1 : 1);
-		if (move_success) { global.game_state.turn = "player"; return; }
+		if (move_success) { end_enemy_turn(); return; }
 	} else {
 		// if Y is further, move in Y first, then X
 		move_success = move_and_check_y(dist_y > 0 ? 1 : -1);
-		if (move_success) { global.game_state.turn = "player"; return; }
+		if (move_success) { end_enemy_turn(); return; }
 		
 		move_success = move_and_check_x(dist_x > 0 ? 1 : -1);
-		if (move_success) { global.game_state.turn = "player"; return; }
+		if (move_success) { end_enemy_turn(); return; }
 		
 		move_success = move_and_check_y(dist_y > 0 ? -1 : 1);
-		if (move_success) { global.game_state.turn = "player"; return; }
+		if (move_success) { end_enemy_turn(); return; }
 		
 		move_success = move_and_check_x(dist_x > 0 ? -1 : 1);
-		if (move_success) { global.game_state.turn = "player"; return; }
-	
+		if (move_success) { end_enemy_turn(); return; }
 	}
+	
 }

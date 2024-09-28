@@ -4,7 +4,7 @@ grid_size = 64;
 
 global.game_state = {
 	turn: "player",
-	selected_action: ""
+	selected_action: "move"
 }
 move_timer = 0; // temporary
 
