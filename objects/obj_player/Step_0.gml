@@ -17,7 +17,7 @@ if (global.game_state.selected_action == "move") {
 		move_x = 1;
 	}
 	if (keyboard_check_pressed(vk_space)) {
-		global.game_state.turn = "enemy"
+		end_player_turn();
 	}
 
 	var move_success = false
@@ -32,7 +32,7 @@ if (global.game_state.selected_action == "move") {
 	}
 
 	if (move_success) {
-		global.game_state.turn = "enemy";
+		end_player_turn();
 		global.game_state.selected_action = "";
 	}
 
@@ -68,7 +68,7 @@ if (global.game_state.selected_action == "attack") {
 	}
 	
 	if (attack_success) {
-		global.game_state.turn = "enemy";
+		end_player_turn();
 		global.game_state.selected_action = "";
 	}
 }

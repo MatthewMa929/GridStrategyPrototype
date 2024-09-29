@@ -2,10 +2,6 @@
 grid_size = 64;
 
 
-if(global.game_state.turn == "enemy") {
-	move_closer()
-}
-
 if hp <= 0 {
 	instance_destroy()
 }

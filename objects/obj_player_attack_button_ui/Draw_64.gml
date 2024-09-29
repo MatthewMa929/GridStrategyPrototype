@@ -11,11 +11,11 @@ if (!_disabled) {
 }
 
 if (_disabled) {
-    draw_sprite_ext(spr_attack_button, 0, x, y, 1, 1, 0, c_gray, 1); // Draw it grayed out
+    draw_sprite_ext(spr_ui_button, 0, x, y, 1, 1, 0, c_gray, 1); // Draw it grayed out
 } else if (global.game_state.selected_action == "attack") {
-	draw_sprite_ext(spr_attack_button, 0, x, y, 1, 1, 0, c_lime, 1); // Draw it in green
+	draw_sprite_ext(spr_ui_button, 0, x, y, 1, 1, 0, c_lime, 1); // Draw it in green
 } else {
-	 draw_sprite(spr_attack_button, 0, x, y); // Draw it normally
+	 draw_sprite(spr_ui_button, 0, x, y); // Draw it normally
 }
 
 draw_set_color(c_black)

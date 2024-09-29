@@ -6,6 +6,8 @@ atk = 3;
 check_x = x
 check_y = y
 
+turn_controller = instance_find(obj_turn_controller, 0);
+
 
 // helper function to move in the X direction and check success
 function move_and_check_x(direction) {
@@ -15,11 +17,6 @@ function move_and_check_x(direction) {
 // helper function to move in the Y direction and check success
 function move_and_check_y(direction) {
     return obj_move_manager.move_object(self, 0, direction);
-}
-
-function end_enemy_turn() {
-	global.game_state.turn = "player";
-	global.game_state.selected_action = "move";
 }
 
 function move_closer() {
@@ -36,29 +33,29 @@ function move_closer() {
 	if (abs(dist_x) > abs(dist_y)) {
 		// if X is further, move in X first, then X
 		move_success = move_and_check_x(dist_x > 0 ? 1 : -1);
-		if (move_success) { end_enemy_turn(); return; }
+		if (move_success) { return; }
 		
 		move_success = move_and_check_y(dist_y > 0 ? 1 : -1);
-		if (move_success) { end_enemy_turn(); return; }
+		if (move_success) { return; }
 		
 		move_success = move_and_check_x(dist_x > 0 ? -1 : 1);
-		if (move_success) { end_enemy_turn(); return; }
+		if (move_success) { return; }
 		
 		move_success = move_and_check_y(dist_y > 0 ? -1 : 1);
-		if (move_success) { end_enemy_turn(); return; }
+		if (move_success) { return; }
 	} else {
 		// if Y is further, move in Y first, then X
 		move_success = move_and_check_y(dist_y > 0 ? 1 : -1);
-		if (move_success) { end_enemy_turn(); return; }
+		if (move_success) { return; }
 		
 		move_success = move_and_check_x(dist_x > 0 ? 1 : -1);
-		if (move_success) { end_enemy_turn(); return; }
+		if (move_success) { return; }
 		
 		move_success = move_and_check_y(dist_y > 0 ? -1 : 1);
-		if (move_success) { end_enemy_turn(); return; }
+		if (move_success) { return; }
 		
 		move_success = move_and_check_x(dist_x > 0 ? -1 : 1);
-		if (move_success) { end_enemy_turn(); return; }
+		if (move_success) { return; }
 	}
 }
 
@@ -79,3 +76,4 @@ function check_for_wall(_dir_x, _dir_y) { //returns true if wall in projectile p
 		}
 	}
 }
+
