@@ -33,7 +33,7 @@ function attack_object(obj, attack_x, attack_y) {
 	with(obj_enemy) {
 		if (x >= check_x && x < check_x + grid_size && y >= check_y && y < check_y + grid_size) {
 	        show_debug_message("Enemy detected at: x = " + string(x) + ", y = " + string(y));
-	        instance_destroy();
+	        obj_enemy.hp -= obj_player.atk;
 	        return true;
 		}
 	}
