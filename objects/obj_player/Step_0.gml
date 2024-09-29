@@ -68,6 +68,7 @@ if (global.game_state.selected_action == "attack") {
 	}
 	
 	if (attack_success) {
+		state = "attack"
 		end_player_turn();
 		global.game_state.selected_action = "";
 	}
@@ -75,6 +76,22 @@ if (global.game_state.selected_action == "attack") {
 
 if max_hp < hp {
 	hp = max_hp
+}
+
+// Animation states
+switch (state) {
+	case "idle":
+		sprite_index = spr_hero_idle;
+		image_speed = 1;
+		break;
+	case "attack":
+		sprite_index = spr_hero_attack;
+		image_speed = 1;
+		
+		if (image_index >= image_number - 1) {
+			state="idle";
+		}
+		break;
 }
 
 
