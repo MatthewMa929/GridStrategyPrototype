@@ -37,6 +37,7 @@ function move_closer() {
         var attack_direction_y = dist_y > 0 ? 1 : (dist_y < 0 ? -1 : 0);
 		
 		melee_attack(attack_direction_x, attack_direction_y);
+		audio_play_sound(snd_player_hurt, 0, false);
 		return;
 	}
 
