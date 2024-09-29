@@ -8,9 +8,11 @@ ability = "Shoot"
 
 function shoot_or_move(_dir_x, _dir_y) {
 	if !check_for_wall(_dir_x, _dir_y) {
+		audio_play_sound(snd_enemy_shoot, 0, false);
 		shoot_bullet(_dir_x, _dir_y, obj_enemy)
 	}
 	else {
+		audio_play_sound(snd_enemy_move, 0, false);
 		move_closer()
 	}
 }

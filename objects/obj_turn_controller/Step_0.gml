@@ -26,17 +26,20 @@ if (global.game_state.turn == "enemy") {
 			current_enemy = ds_queue_dequeue(enemy_queue);
 			show_debug_message("Moving enemy: " + object_get_name(current_enemy.object_index));
 			
+			
 			if (current_enemy.object_index == obj_druid) {
 				with(current_enemy) {
 					move_druid();
+
 				}
 			} else {
 				with(current_enemy) {
 					move_closer();
+					audio_play_sound(snd_enemy_move, 0, false);
 				}
 			}
 			
-			alarm_set(0, game_get_speed(gamespeed_fps) * 0.5);
+			alarm_set(0, game_get_speed(gamespeed_fps) * .5);
 		} else {
 			// all enemies have moved
 			global.game_state.turn = "player";

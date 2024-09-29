@@ -32,6 +32,7 @@ if (global.game_state.selected_action == "move") {
 	}
 
 	if (move_success) {
+		audio_play_sound(snd_player_move, 0, false);
 		end_player_turn();
 		global.game_state.selected_action = "";
 	}
