@@ -1,3 +1,19 @@
+// win condition
+var star = instance_position(x + global.grid_size/2, y + global.grid_size/2, obj_star);
+if (star != noone) {
+	global.game_paused = true;
+	instance_create_layer(room_width/2, room_height/2, "Other", obj_win_screen);
+	instance_destroy(star);
+}
+
+// loss condition
+if (hp <= 0) {
+	global.game_paused = true;
+	instance_create_layer(room_width/2, room_height/2, "Other", obj_loss_screen);
+	instance_destroy(star);
+}
+
+
 //Will ask obj_move_manager before moving
 if (global.game_state.selected_action == "move") {
 	var move_x = 0;

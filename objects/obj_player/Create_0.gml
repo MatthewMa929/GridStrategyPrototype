@@ -4,6 +4,7 @@ atk = 3
 state = "idle"
 
 function end_player_turn() {
+	show_debug_message(["PLAYER HEALTH: ", hp]);
 	with (obj_turn_controller) {
 		global.game_state.turn = "enemy";
 		enemy_turn_in_progress = false;
