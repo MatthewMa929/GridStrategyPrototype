@@ -41,7 +41,5 @@
     {"name":"spr_soul","order":7,"path":"sprites/spr_soul/spr_soul.yy",},
     {"name":"spr_under_hp_bar","order":6,"path":"sprites/spr_under_hp_bar/spr_under_hp_bar.yy",},
     {"name":"spr_wall","order":1,"path":"sprites/spr_wall/spr_wall.yy",},
-    {"name":"Sprite10","order":17,"path":"sprites/Sprite10/Sprite10.yy",},
-    {"name":"Sprite5","order":16,"path":"sprites/Sprite5/Sprite5.yy",},
   ],
 }

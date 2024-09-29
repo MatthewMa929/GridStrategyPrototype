@@ -16,6 +16,9 @@ if (global.game_state.selected_action == "move") {
 	if (keyboard_check_pressed(ord("D"))){
 		move_x = 1;
 	}
+	if (keyboard_check_pressed(vk_space)) {
+		global.game_state.turn = "enemy"
+	}
 
 	var move_success = false
 	

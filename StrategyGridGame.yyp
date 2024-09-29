@@ -62,8 +62,6 @@
     {"id":{"name":"spr_soul","path":"sprites/spr_soul/spr_soul.yy",},},
     {"id":{"name":"spr_under_hp_bar","path":"sprites/spr_under_hp_bar/spr_under_hp_bar.yy",},},
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},},
-    {"id":{"name":"Sprite10","path":"sprites/Sprite10/Sprite10.yy",},},
-    {"id":{"name":"Sprite5","path":"sprites/Sprite5/Sprite5.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
