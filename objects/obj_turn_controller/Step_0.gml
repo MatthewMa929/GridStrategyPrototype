@@ -49,7 +49,3 @@ if (global.game_state.turn == "enemy") {
 		}
 	}
 }
-
-if (alarm[0] <= 0) {
-	current_enemy = noone;
-}

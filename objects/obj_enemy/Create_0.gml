@@ -29,6 +29,16 @@ function move_closer() {
 	
 	var dist_x = _player_x - x;
 	var dist_y = _player_y - y;
+	
+	// if enemy is directly next to player, perform melee attack
+	show_debug_message(["DISTANCE TO PLAYER", dist_x, dist_y]);
+	if ((abs(dist_x) == 64  &&  abs(dist_y) == 0) || (abs(dist_y) == 64  &&  abs(dist_x) == 0)) {
+		var attack_direction_x = dist_x > 0 ? 1 : (dist_x < 0 ? -1 : 0);
+        var attack_direction_y = dist_y > 0 ? 1 : (dist_y < 0 ? -1 : 0);
+		
+		melee_attack(attack_direction_x, attack_direction_y);
+		return;
+	}
 
 	if (abs(dist_x) > abs(dist_y)) {
 		// if X is further, move in X first, then X
@@ -59,6 +69,25 @@ function move_closer() {
 	}
 }
 
+function melee_attack(attack_x, attack_y) {
+	var grid_x = floor(obj_player.x / global.grid_size) * global.grid_size;
+	var grid_y = floor(obj_player.y / global.grid_size) * global.grid_size;
+	
+	with(obj_player) {
+	    show_debug_message("Player detected at: x = " + string(obj_player.x) + ", y = " + string(obj_player.x));
+	    obj_player.hp -= obj_enemy.atk;
+			
+		// Emit 10 attack particles
+		var ps_instance = instance_nearest(x, y, obj_particle_system);
+		if (ps_instance != noone) {
+			ps_instance.emit_particles(obj_player.x + 32, obj_player.y + 32, 10); 
+		}
+		audio_play_sound(snd_player_hurt, 0, false);
+	
+	    return true;
+	}
+}
+
 function check_for_wall(_dir_x, _dir_y) { //returns true if wall in projectile path
 	check_x = x
 	check_y = y
@@ -70,7 +99,6 @@ function check_for_wall(_dir_x, _dir_y) { //returns true if wall in projectile p
 	while current < max_loop {
 		check_x += _dir_x * global.grid_size
 		check_y += _dir_y * global.grid_size
-		show_debug_message([obj_player.x, obj_player.y, check_x, check_y, "player"])
 		if (position_meeting(check_x, check_y, obj_player)) {
 			show_debug_message([check_x, check_y, "player"])
 			return false

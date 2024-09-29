@@ -17,7 +17,7 @@ if (global.game_state.selected_action == "move") {
 		move_x = 1;
 	}
 	if (keyboard_check_pressed(vk_space)) {
-		end_player_turn();
+		alarm_set(0, game_get_speed(gamespeed_fps) * .5);
 	}
 
 	var move_success = false
@@ -33,8 +33,8 @@ if (global.game_state.selected_action == "move") {
 
 	if (move_success) {
 		audio_play_sound(snd_player_move, 0, false);
-		end_player_turn();
 		global.game_state.selected_action = "";
+		alarm_set(0, game_get_speed(gamespeed_fps) * .5);
 	}
 
 }
@@ -70,8 +70,8 @@ if (global.game_state.selected_action == "attack") {
 	
 	if (attack_success) {
 		state = "attack"
-		end_player_turn();
 		global.game_state.selected_action = "";
+		alarm_set(0, game_get_speed(gamespeed_fps) * .5);
 	}
 }
 
