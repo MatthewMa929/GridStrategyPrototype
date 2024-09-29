@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enemy",
-    "path":"sprites/spr_enemy/spr_enemy.yy",
+    "name":"spr_goblin",
+    "path":"sprites/spr_goblin/spr_goblin.yy",
   },
   "spriteMaskId":null,
   "visible":true,

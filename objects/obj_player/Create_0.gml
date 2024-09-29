@@ -1,6 +1,7 @@
 max_hp = 10
 hp = max_hp
 atk = 3
+state = "idle"
 
 function end_player_turn() {
 	with (obj_turn_controller) {

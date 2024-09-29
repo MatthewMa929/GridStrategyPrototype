@@ -62,7 +62,12 @@ function move_closer() {
 function check_for_wall(_dir_x, _dir_y) { //returns true if wall in projectile path
 	check_x = x
 	check_y = y
-	while true {
+	
+	// prevent infinite loop
+	var max_loop = 100;
+	var current = 0;
+	
+	while current < max_loop {
 		check_x += _dir_x * global.grid_size
 		check_y += _dir_y * global.grid_size
 		show_debug_message([obj_player.x, obj_player.y, check_x, check_y, "player"])
@@ -74,6 +79,10 @@ function check_for_wall(_dir_x, _dir_y) { //returns true if wall in projectile p
 			show_debug_message([check_x, check_y, "wall"])
 			return true
 		}
+		
+		current++;
 	}
+	
+	return false;
 }
 

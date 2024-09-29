@@ -33,11 +33,22 @@ function attack_object(obj, attack_x, attack_y) {
 		if (x >= check_x && x < check_x + global.grid_size && y >= check_y && y < check_y + global.grid_size) {
 	        show_debug_message("Enemy detected at: x = " + string(x) + ", y = " + string(y));
 	        obj_enemy.hp -= obj_player.atk;
+			
+			// Emit 10 attack particles
+			var ps_instance = instance_nearest(x, y, obj_particle_system);
+			if (ps_instance != noone) {
+				ps_instance.emit_particles(check_x + 32, check_y + 32, 10); 
+			}
+	
 	        return true;
 		}
 	}
 
 	return false;
+}
+
+function attack_particles(target_x, target_y) {
+	
 }
 
 

@@ -1,0 +1,2 @@
+part_type_destroy(particle_type);
+part_system_destroy(attack_particle_system);
