@@ -2,7 +2,8 @@
 var star = instance_position(x + global.grid_size/2, y + global.grid_size/2, obj_star);
 if (star != noone) {
 	global.game_paused = true;
-	instance_create_layer(room_width/2, room_height/2, "Other", obj_win_screen);
+	//instance_create_layer(room_width/2, room_height/2, "Other", obj_win_screen);
+	obj_room_change.next_room()
 	instance_destroy(star);
 }
 

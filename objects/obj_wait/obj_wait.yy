@@ -1,16 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_star",
-  "eventList":[],
+  "%Name":"obj_wait",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_star",
+  "name":"obj_wait",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
-  "persistent":false,
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -28,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_stairs",
-    "path":"sprites/spr_stairs/spr_stairs.yy",
+    "name":"spr_wait",
+    "path":"sprites/spr_wait/spr_wait.yy",
   },
   "spriteMaskId":null,
   "visible":true,

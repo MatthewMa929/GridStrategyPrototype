@@ -1,5 +1,11 @@
 if ability == "Shoot" {
-	instance_create_layer(x, y, "Icons", obj_bullet)
+	obj_icon.sprite_index = spr_bullet
+	//instance_create_layer(x, y, "Icons", obj_bullet)
+}
+
+if ability == "Heavy Slam" {
+	obj_icon.sprite_index = spr_heavy_slam
+	//instance_create_layer(x, y, "Icons", obj_heavy_slam)
 }
 
 var _disabled = (global.game_state.turn != "player");

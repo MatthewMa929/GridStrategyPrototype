@@ -2,7 +2,7 @@ event_inherited();
 
 max_hp = 3
 hp = max_hp
-atk = 3
+atk = 2
 
 ability = "Shoot"
 

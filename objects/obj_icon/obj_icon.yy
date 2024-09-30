@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_star",
+  "%Name":"obj_icon",
   "eventList":[],
   "managed":true,
-  "name":"obj_star",
+  "name":"obj_icon",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
-  "persistent":false,
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -27,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_stairs",
-    "path":"sprites/spr_stairs/spr_stairs.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_star",
+  "%Name":"obj_heavy_slam",
   "eventList":[],
   "managed":true,
-  "name":"obj_star",
+  "name":"obj_heavy_slam",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_stairs",
-    "path":"sprites/spr_stairs/spr_stairs.yy",
+    "name":"spr_heavy_slam",
+    "path":"sprites/spr_heavy_slam/spr_heavy_slam.yy",
   },
   "spriteMaskId":null,
   "visible":true,

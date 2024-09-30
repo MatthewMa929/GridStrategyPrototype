@@ -5,7 +5,7 @@ hp = max_hp;
 atk = 3;
 check_x = x
 check_y = y
-ability = "None"
+ability = "Heavy Slam"
 
 turn_controller = instance_find(obj_turn_controller, 0);
 
