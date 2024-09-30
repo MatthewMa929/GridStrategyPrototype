@@ -8,6 +8,11 @@ if ability == "Heavy Slam" {
 	//instance_create_layer(x, y, "Icons", obj_heavy_slam)
 }
 
+if ability == "Hook" {
+	obj_icon.sprite_index = spr_hook
+	//instance_create_layer(x, y, "Icons", obj_heavy_slam)
+}
+
 if ability == "None" {
 	obj_icon.sprite_index = noone
 }

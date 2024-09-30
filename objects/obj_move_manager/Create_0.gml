@@ -77,4 +77,7 @@ function use_ability(obj, ability_x, ability_y) {
 		obj_ability_manager.slam(ability_x, ability_y)
 	}
 
+	if obj_ability_manager.ability == "Hook" {
+		obj_ability_manager.hook_enemy(ability_x, ability_y)
+	}
 }

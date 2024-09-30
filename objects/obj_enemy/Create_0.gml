@@ -95,12 +95,14 @@ function check_for_wall(_dir_x, _dir_y) { //returns true if wall in projectile p
 	check_y = y
 	
 	// prevent infinite loop
-	var max_loop = 100;
+	var max_loop = 20;
 	var current = 0;
+	
 	
 	while current < max_loop {
 		check_x += _dir_x * global.grid_size
 		check_y += _dir_y * global.grid_size
+		show_debug_message([check_x, check_y])
 		if (position_meeting(check_x, check_y, obj_player)) {
 			show_debug_message([check_x, check_y, "player"])
 			return false
@@ -113,6 +115,6 @@ function check_for_wall(_dir_x, _dir_y) { //returns true if wall in projectile p
 		current++;
 	}
 	
-	return false;
+	return true;
 }
 

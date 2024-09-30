@@ -30,9 +30,15 @@ if (global.game_state.turn == "enemy") {
 			if (current_enemy.object_index == obj_druid) {
 				with(current_enemy) {
 					move_druid();
-
 				}
-			} else {
+			} 
+			else if (current_enemy.object_index == obj_grappler) {
+				with(current_enemy) {
+					move_grappler();
+				}
+			} 
+			
+			else {
 				with(current_enemy) {
 					move_closer();
 					audio_play_sound(snd_enemy_move, 0, false);
