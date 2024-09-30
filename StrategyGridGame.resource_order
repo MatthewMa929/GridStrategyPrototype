@@ -48,7 +48,7 @@
     {"name":"obj_win_screen","order":18,"path":"objects/obj_win_screen/obj_win_screen.yy",},
     {"name":"rm_lv2","order":1,"path":"rooms/rm_lv2/rm_lv2.yy",},
     {"name":"rm_lv3","order":2,"path":"rooms/rm_lv3/rm_lv3.yy",},
-    {"name":"rm_test","order":3,"path":"rooms/rm_test/rm_test.yy",},
+    {"name":"rm_lv4","order":3,"path":"rooms/rm_lv4/rm_lv4.yy",},
     {"name":"hook","order":2,"path":"scripts/hook/hook.yy",},
     {"name":"shoot_bullet","order":1,"path":"scripts/shoot_bullet/shoot_bullet.yy",},
     {"name":"snd_enemy_move","order":2,"path":"sounds/snd_enemy_move/snd_enemy_move.yy",},

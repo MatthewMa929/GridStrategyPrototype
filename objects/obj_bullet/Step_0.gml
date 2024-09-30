@@ -3,6 +3,7 @@ y += dir_y * spd
 
 if place_meeting(x, y, obj_wall) {
 	instance_destroy()
+	global.active_bullets--;
 }
 else if place_meeting(x, y, target) {
 	var target_hit = instance_place(x, y, target)

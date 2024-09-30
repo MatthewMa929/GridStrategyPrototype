@@ -1,4 +1,4 @@
-rm_arr = [rm_lv1, rm_lv2, rm_lv3]
+rm_arr = [rm_lv1, rm_lv2, rm_lv3, rm_lv4]
 rand_rm_ind = irandom_range(0, array_length(rm_arr))
 
 function next_room() {

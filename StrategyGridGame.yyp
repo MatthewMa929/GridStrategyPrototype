@@ -69,7 +69,7 @@
     {"id":{"name":"rm_lv1","path":"rooms/rm_lv1/rm_lv1.yy",},},
     {"id":{"name":"rm_lv2","path":"rooms/rm_lv2/rm_lv2.yy",},},
     {"id":{"name":"rm_lv3","path":"rooms/rm_lv3/rm_lv3.yy",},},
-    {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
+    {"id":{"name":"rm_lv4","path":"rooms/rm_lv4/rm_lv4.yy",},},
     {"id":{"name":"global_script","path":"scripts/global_script/global_script.yy",},},
     {"id":{"name":"hook","path":"scripts/hook/hook.yy",},},
     {"id":{"name":"shoot_bullet","path":"scripts/shoot_bullet/shoot_bullet.yy",},},
@@ -109,10 +109,10 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
     {"roomId":{"name":"rm_lv1","path":"rooms/rm_lv1/rm_lv1.yy",},},
     {"roomId":{"name":"rm_lv2","path":"rooms/rm_lv2/rm_lv2.yy",},},
     {"roomId":{"name":"rm_lv3","path":"rooms/rm_lv3/rm_lv3.yy",},},
+    {"roomId":{"name":"rm_lv4","path":"rooms/rm_lv4/rm_lv4.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
