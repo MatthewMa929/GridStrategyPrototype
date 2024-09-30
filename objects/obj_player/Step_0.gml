@@ -8,6 +8,7 @@ if (star != noone) {
 
 // loss condition
 if (hp <= 0) {
+	hp = 0;
 	global.game_paused = true;
 	instance_create_layer(room_width/2, room_height/2, "Other", obj_loss_screen);
 	instance_destroy(star);

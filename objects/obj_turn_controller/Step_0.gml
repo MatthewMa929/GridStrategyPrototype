@@ -40,7 +40,7 @@ if (global.game_state.turn == "enemy") {
 			}
 			
 			alarm_set(0, game_get_speed(gamespeed_fps) * .2);
-		} else {
+		} else if (global.active_bullets == 0) {
 			// all enemies have moved
 			global.game_state.turn = "player";
 			global.game_state.selected_action = "move";

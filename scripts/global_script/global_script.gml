@@ -5,3 +5,4 @@ global.game_state = {
 	turn: "player",
 	selected_action: "move"
 }
+global.active_bullets = 0;
