@@ -4,6 +4,7 @@ visible = true
 
 if place_meeting(x, y, obj_wall) {
 	instance_destroy()
+	global.active_bullets--;
 }
 else if place_meeting(x, y, target) {
 	show_debug_message("HOOK HIT")

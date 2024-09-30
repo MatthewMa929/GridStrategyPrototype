@@ -20,6 +20,30 @@ function move_and_check_y(direction) {
     return obj_move_manager.move_object(self, 0, direction);
 }
 
+function check_melee() {
+	var _player_x = obj_player.x;
+	var _player_y = obj_player.y;
+
+	var move_x = 0;
+	var movy_y = 0;
+	var move_success = false;
+	
+	var dist_x = _player_x - x;
+	var dist_y = _player_y - y;
+	
+	// if enemy is directly next to player, perform melee attack
+	show_debug_message(["DISTANCE TO PLAYER", dist_x, dist_y]);
+	if ((abs(dist_x) == 64  &&  abs(dist_y) == 0) || (abs(dist_y) == 64  &&  abs(dist_x) == 0)) {
+		var attack_direction_x = dist_x > 0 ? 1 : (dist_x < 0 ? -1 : 0);
+        var attack_direction_y = dist_y > 0 ? 1 : (dist_y < 0 ? -1 : 0);
+		
+		melee_attack(attack_direction_x, attack_direction_y);
+		audio_play_sound(snd_player_hurt, 0, false);
+		return true;
+	}
+	return false
+}
+
 function move_closer() {
 	var _player_x = obj_player.x;
 	var _player_y = obj_player.y;
@@ -77,7 +101,7 @@ function melee_attack(attack_x, attack_y) {
 	
 	with(obj_player) {
 	    show_debug_message("Player detected at: x = " + string(obj_player.x) + ", y = " + string(obj_player.x));
-	    obj_player.hp -= obj_enemy.atk;
+	    obj_player.hp -= atk;
 			
 		// Emit 10 attack particles
 		var ps_instance = instance_nearest(x, y, obj_particle_system);

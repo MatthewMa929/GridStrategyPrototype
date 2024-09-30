@@ -2,9 +2,9 @@ event_inherited()
 
 ability = "Hook"
 
-max_hp = 6
+max_hp = 7
 hp = max_hp
-atk = 2
+atk = 1
 
 function hook_or_move(_dir_x, _dir_y) {
 	if !check_for_wall(_dir_x, _dir_y) {
@@ -17,7 +17,10 @@ function hook_or_move(_dir_x, _dir_y) {
 }
 
 function move_grappler() {
-	if obj_player.y == y and obj_player.x > x {
+	if check_melee() {
+		return;
+	}
+	else if obj_player.y == y and obj_player.x > x {
 		hook_or_move(1, 0)
 		return;
 	}
