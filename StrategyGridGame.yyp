@@ -37,6 +37,7 @@
     {"id":{"name":"fnt_normal","path":"fonts/fnt_normal/fnt_normal.yy",},},
     {"id":{"name":"obj_ability_holder","path":"objects/obj_ability_holder/obj_ability_holder.yy",},},
     {"id":{"name":"obj_ability_manager","path":"objects/obj_ability_manager/obj_ability_manager.yy",},},
+    {"id":{"name":"obj_back","path":"objects/obj_back/obj_back.yy",},},
     {"id":{"name":"obj_bullet","path":"objects/obj_bullet/obj_bullet.yy",},},
     {"id":{"name":"obj_draw_text","path":"objects/obj_draw_text/obj_draw_text.yy",},},
     {"id":{"name":"obj_druid","path":"objects/obj_druid/obj_druid.yy",},},
@@ -65,6 +66,7 @@
     {"id":{"name":"particle_system","path":"particles/particle_system/particle_system.yy",},},
     {"id":{"name":"rm_lv1","path":"rooms/rm_lv1/rm_lv1.yy",},},
     {"id":{"name":"rm_lv2","path":"rooms/rm_lv2/rm_lv2.yy",},},
+    {"id":{"name":"rm_lv3","path":"rooms/rm_lv3/rm_lv3.yy",},},
     {"id":{"name":"global_script","path":"scripts/global_script/global_script.yy",},},
     {"id":{"name":"shoot_bullet","path":"scripts/shoot_bullet/shoot_bullet.yy",},},
     {"id":{"name":"snd_bgm_loop","path":"sounds/snd_bgm_loop/snd_bgm_loop.yy",},},
@@ -73,6 +75,7 @@
     {"id":{"name":"snd_player_hurt","path":"sounds/snd_player_hurt/snd_player_hurt.yy",},},
     {"id":{"name":"snd_player_move","path":"sounds/snd_player_move/snd_player_move.yy",},},
     {"id":{"name":"spr_ability_holder","path":"sprites/spr_ability_holder/spr_ability_holder.yy",},},
+    {"id":{"name":"spr_back","path":"sprites/spr_back/spr_back.yy",},},
     {"id":{"name":"spr_bullet","path":"sprites/spr_bullet/spr_bullet.yy",},},
     {"id":{"name":"spr_bush","path":"sprites/spr_bush/spr_bush.yy",},},
     {"id":{"name":"spr_druid","path":"sprites/spr_druid/spr_druid.yy",},},
@@ -102,6 +105,7 @@
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_lv1","path":"rooms/rm_lv1/rm_lv1.yy",},},
     {"roomId":{"name":"rm_lv2","path":"rooms/rm_lv2/rm_lv2.yy",},},
+    {"roomId":{"name":"rm_lv3","path":"rooms/rm_lv3/rm_lv3.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

@@ -3,10 +3,11 @@
 //Hook: Pull enemy to you or hook to a wall
 ability_labels = ["Heavy Slam", "Shoot", "Hook"]
 
-ability = "Heavy Slam"
+ability = "None"
 
 function shoot(_dir_x, _dir_y) {
 	shoot_bullet(_dir_x, _dir_y, obj_player)
+	ability = "None"
 }
 
 function slam(_dir_x, _dir_y) {
@@ -45,9 +46,8 @@ function slam(_dir_x, _dir_y) {
 				ps_instance.emit_particles(check_x + 32, check_y + 32, 10); 
 			}
 	
-	        return true;
 		}
 	}
 
-	return false;
+	ability = "None"
 }

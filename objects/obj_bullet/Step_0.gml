@@ -6,7 +6,7 @@ if place_meeting(x, y, obj_wall) {
 }
 else if place_meeting(x, y, target) {
 	var target_hit = instance_place(x, y, target)
-	target_hit.hp += -3
+	target_hit.hp += -2
 	audio_play_sound(snd_player_hurt, 0, false);
 	instance_destroy()
 	global.active_bullets--;

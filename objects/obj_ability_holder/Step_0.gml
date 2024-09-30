@@ -8,6 +8,10 @@ if ability == "Heavy Slam" {
 	//instance_create_layer(x, y, "Icons", obj_heavy_slam)
 }
 
+if ability == "None" {
+	obj_icon.sprite_index = noone
+}
+
 var _disabled = (global.game_state.turn != "player");
 
 if (!_disabled) {

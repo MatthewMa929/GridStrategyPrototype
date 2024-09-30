@@ -1,6 +1,6 @@
 event_inherited();
 
-max_hp = 3
+max_hp = 2
 hp = max_hp
 atk = 2
 

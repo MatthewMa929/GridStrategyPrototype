@@ -6,3 +6,4 @@ global.game_state = {
 	selected_action: "move"
 }
 global.active_bullets = 0;
+global.lv_amt = 0;
