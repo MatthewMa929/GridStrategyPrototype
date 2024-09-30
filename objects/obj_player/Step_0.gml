@@ -92,6 +92,42 @@ if (global.game_state.selected_action == "attack") {
 	}
 }
 
+if (global.game_state.selected_action == "ability") {
+	var ability_x = 0;
+	var ability_y = 0;
+
+
+	if (keyboard_check_pressed(ord("W"))){
+		ability_y = -1;
+	}
+	if (keyboard_check_pressed(ord("S"))){
+		ability_y = 1;
+	}
+	if (keyboard_check_pressed(ord("A"))){
+		ability_x = -1;
+	}
+	if (keyboard_check_pressed(ord("D"))){
+		ability_x = 1;
+	}
+	
+	var ability_success = false;
+	state = "ability"
+	
+	// forbid diagonal
+	if (ability_x != 0 && ability_y != 0) {
+		ability_y = 0; 
+		
+	}
+	
+	if (global.game_state.turn == "player" && (ability_x != 0 || ability_y != 0)) {
+		obj_move_manager.use_ability(self, ability_x, ability_y);
+		global.game_state.selected_action = "";
+	}
+	
+	alarm_set(0, game_get_speed(gamespeed_fps) * .5);
+}
+
+
 if max_hp < hp {
 	hp = max_hp
 }

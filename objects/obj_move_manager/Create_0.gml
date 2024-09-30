@@ -67,3 +67,16 @@ function attack_object(obj, attack_x, attack_y) {
 	return false;
 }
 
+function use_ability(obj, ability_x, ability_y) {
+	var grid_x = floor(obj.x / global.grid_size) * global.grid_size;
+	var grid_y = floor(obj.y / global.grid_size) * global.grid_size;
+	
+	var check_x = grid_x + (ability_x * global.grid_size);
+	var check_y = grid_y + (ability_y * global.grid_size);
+	
+	if obj_ability_manager.ability == "Shoot" {
+		obj_ability_manager.shoot(ability_x, ability_y)
+	}
+		
+
+}
