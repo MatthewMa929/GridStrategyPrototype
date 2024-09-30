@@ -3,6 +3,8 @@
 //Hook: Pull enemy to you or hook to a wall
 ability_labels = ["Heavy Slam", "Shoot", "Hook"]
 
-//ability slots
-slots = []
+ability = "None"
 
+function shoot(_dir_x, _dir_y) {
+	shoot_bullet(_dir_x, _dir_y, obj_player)
+}

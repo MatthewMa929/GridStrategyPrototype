@@ -39,7 +39,7 @@ if (global.game_state.turn == "enemy") {
 				}
 			}
 			
-			alarm_set(0, game_get_speed(gamespeed_fps) * .5);
+			alarm_set(0, game_get_speed(gamespeed_fps) * .2);
 		} else {
 			// all enemies have moved
 			global.game_state.turn = "player";
