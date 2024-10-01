@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_bush",
   "bboxMode":1,
-  "bbox_bottom":65,
+  "bbox_bottom":63,
   "bbox_left":0,
   "bbox_right":63,
   "bbox_top":0,
@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":66,
+  "height":64,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"6bd6cdea-0362-48b2-af4f-caf14ff6b9d6","blendMode":0,"displayName":"default","isLocked":false,"name":"6bd6cdea-0362-48b2-af4f-caf14ff6b9d6","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},

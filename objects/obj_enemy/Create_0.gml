@@ -7,6 +7,8 @@ check_x = x
 check_y = y
 ability = "Heavy Slam"
 
+show_debug_message("Enemy Created")
+
 turn_controller = instance_find(obj_turn_controller, 0);
 
 
@@ -99,19 +101,19 @@ function melee_attack(attack_x, attack_y) {
 	var grid_x = floor(obj_player.x / global.grid_size) * global.grid_size;
 	var grid_y = floor(obj_player.y / global.grid_size) * global.grid_size;
 	
-	with(obj_player) {
-	    show_debug_message("Player detected at: x = " + string(obj_player.x) + ", y = " + string(obj_player.x));
-	    obj_player.hp -= atk;
+	//with(obj_player) {
+	//    show_debug_message("Player detected at: x = " + string(obj_player.x) + ", y = " + string(obj_player.x));
+	//    show_debug_message("ATTACK:" + string(atk))
+	obj_player.hp -= atk;
 			
 		// Emit 10 attack particles
-		var ps_instance = instance_nearest(x, y, obj_particle_system);
-		if (ps_instance != noone) {
-			ps_instance.emit_particles(obj_player.x + 32, obj_player.y + 32, 10); 
-		}
-		audio_play_sound(snd_player_hurt, 0, false);
-	
-	    return true;
+	var ps_instance = instance_nearest(x, y, obj_particle_system);
+	if (ps_instance != noone) {
+		ps_instance.emit_particles(obj_player.x + 32, obj_player.y + 32, 10); 
 	}
+	audio_play_sound(snd_player_hurt, 0, false);
+	
+	return true;
 }
 
 function check_for_wall(_dir_x, _dir_y) { //returns true if wall in projectile path
