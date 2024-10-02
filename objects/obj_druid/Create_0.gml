@@ -5,6 +5,7 @@ hp = max_hp
 atk = 2
 
 ability = "Shoot"
+head_ind = 2
 
 function shoot_or_move(_dir_x, _dir_y) {
 	if !check_for_wall(_dir_x, _dir_y) {

@@ -6,6 +6,7 @@ ability = "Hook"
 max_hp = 8;
 hp = max_hp;
 atk = 1;
+head_ind = 1
 
 function hook_or_move(_dir_x, _dir_y) {
 	if !check_for_wall(_dir_x, _dir_y) {

@@ -6,6 +6,7 @@ atk = 3;
 check_x = x
 check_y = y
 ability = "Heavy Slam"
+head_ind = 0
 
 show_debug_message("Enemy Created")
 
